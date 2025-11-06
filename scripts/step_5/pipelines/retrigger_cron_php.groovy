@@ -2,6 +2,7 @@
 // to trigger the nextcloud event system
 // 
 // Recommendation: Run every 30 minutes
+// H/30 * * * *
 
 pipeline {
     agent any

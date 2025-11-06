@@ -8,9 +8,22 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
     https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
     /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt update
-sudo apt install -y fontconfig openjdk-17-jre
+sudo apt install -y fontconfig openjdk-21-jre
 sudo apt install -y jenkins
 ```
+## EOL of openjdk-17-jre
+In case of older setup go here for upgrading the version correctly:
+https://www.jenkins.io/doc/book/platform-information/upgrade-java-to-21/
+
+**Recommended:**
+exchange 
+`sudo apt install -y temurin-21-jre`
+with
+`sudo apt install -y openjdk-21-jre`
+check with
+`update-alternatives --config java`
+reboot
+
 - find out your current ip
 ```bash
 ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}'

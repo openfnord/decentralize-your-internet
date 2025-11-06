@@ -17,7 +17,7 @@ else
 fi
 
 chmod 644 "$HOME_DIR/nextcloud_infra/compose.yml"
-chmod 600 "$HOME_DIR/nextcloud_infra/.env"
+chmod 644 "$HOME_DIR/nextcloud_infra/.env"
 
 echo "Adjusting permissions for Jenkins..."
 sudo chmod 711 "$HOME_DIR"  # Nur Lesen und Ausführen für andere
